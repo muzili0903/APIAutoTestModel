@@ -4,6 +4,7 @@
 @time    :2023/6/26 9:16
 @file    :excelOperation.py
 """
+import json
 import os
 from typing import Any
 
@@ -104,7 +105,7 @@ class WriteXLS(object):
 class ReadExcel(object):
     """读取.xlsx文件"""
 
-    def __init__(self, filename: str, sheet_name: str = 'Sheet1'):
+    def __init__(self, filename: str, sheet_name: str = 'model'):
         """
         :param filename: 文件名
         :param sheet_name: sheet名
@@ -113,6 +114,8 @@ class ReadExcel(object):
             logger.error('文件不存在: {}'.format(filename))
         self.work_book = openpyxl.load_workbook(filename, read_only=True)
         self.sheet_name = self.work_book[sheet_name]
+        # 获取项目名, 用于不同项目的url的拼接
+        self.proName = os.path.split(os.path.split(filename)[0])[1]
 
     def set_sheet_name(self, sheet_name: str) -> None:
         """
@@ -140,8 +143,12 @@ class ReadExcel(object):
         cases = dict()
         # 遍历第一行之外的其他行
         for i in range(1, self.sheet_name.max_row):
-            dic = dict(zip(title, self.get_rows(row_x=i)))
-            cases.update({dic.get(key): dic})
+            data_dict = dict(zip(title, self.get_rows(row_x=i)))
+            data_dict.update({'headers': json.loads(data_dict.get('headers'))})
+            data_dict.update({'data': json.loads(data_dict.get('data'))})
+            data_dict.update({'expected': json.loads(data_dict.get('expected'))})
+            data_dict.update({'proName': self.proName})
+            cases.update({data_dict.get(key): data_dict})
         return cases
 
     def get_rows(self, row_x: int = 0, start_col: int = 1, end_col: int = None) -> list:

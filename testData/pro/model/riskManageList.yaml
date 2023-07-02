@@ -1,0 +1,30 @@
+interface: riskManageList
+title: 风险发票查询-搜索接口
+method: post
+headers:
+  Content-Type: application/json
+  timeout: 5
+url: /ecr-admin/invoice_api/mage/riskManager/riskManageList
+data:
+  pageNumber: 1
+  pageSize: 10
+  invoiceType: ''
+  sellerTaxpayerCode: ''
+  buyerTaxpayerName: ''
+  invoiceBusinessType: ''
+  invoiceDateStart: ''
+  invoiceDateEnd: ''
+  invoiceNo: ''
+  exceptionBaseType: ''
+  exceptionDetailType: ''
+  businessNos: ''
+  appId: ''
+  specificBusinessTypes: ''
+  exceptionDetailFlag: ''
+  requestChannel: ''
+expected:
+  isSuccess: true
+  errorCode: null
+  message: null
+  isPinCode: null
+proName: pro

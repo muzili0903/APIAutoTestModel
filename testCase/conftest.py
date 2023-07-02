@@ -37,10 +37,6 @@ def pytest_configure(config):
     pass
 
 
-def get_P():
-    pass
-
-
 @pytest.hookimpl(tryfirst=True)
 def pytest_sessionstart(session):
     """
@@ -49,7 +45,7 @@ def pytest_sessionstart(session):
     :param session:
     :return:
     """
-    # 启动多进程跑用例时，需要重新实例化MyConfig()
+    # 启动多进程跑用例 或在py文件跑用例时，需要重新实例化MyConfig()
     # PROCONFIG = MyConfig()
     # GolStatic.set_pro_var('PROCONFIG', PROCONFIG)
     PROCONFIG = GolStatic.get_pro_var('PROCONFIG')

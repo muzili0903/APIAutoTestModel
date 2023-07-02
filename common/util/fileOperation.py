@@ -6,14 +6,13 @@
 """
 import os
 
-
 from common.util.filePath import ensure_path_sep
 from common.util.logOperation import logger
 
 
 def get_all_file(path: str) -> list:
     """
-    获取所有文件路径
+    获取目录下的所有文件路径
     :param path:
     :return:
     """
@@ -37,6 +36,15 @@ def get_file_name(path: str) -> str:
     :return:
     """
     return os.path.split(path)[1]
+
+
+def get_file_path(path: str) -> str:
+    """
+    获取文件所在路径
+    :param path:
+    :return:
+    """
+    return os.path.split(path)[0]
 
 
 if __name__ == '__main__':

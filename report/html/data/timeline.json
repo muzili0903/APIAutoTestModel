@@ -2,34 +2,17 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "CN01XIT00000ZON",
+    "name" : "LAPTOP-TT5JR8LD",
     "children" : [ {
-      "name" : "28044-MainThread",
+      "name" : "18360-MainThread",
       "children" : [ {
-        "name" : "test_2",
-        "uid" : "7365a37285e5a965",
-        "parentUid" : "8dbae755a1e86fe82923fc55e56eb8e3",
+        "name" : "test_3",
+        "uid" : "d34bab91c19d31b6",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
         "status" : "passed",
         "time" : {
-          "start" : 1687926060214,
-          "stop" : 1687926060214,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_1",
-        "uid" : "3ca8b81bf2698678",
-        "parentUid" : "8dbae755a1e86fe82923fc55e56eb8e3",
-        "status" : "passed",
-        "time" : {
-          "start" : 1687926060199,
-          "stop" : 1687926060199,
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
           "duration" : 0
         },
         "flaky" : false,
@@ -41,12 +24,80 @@
         "parameters" : [ ]
       }, {
         "name" : "test_3",
-        "uid" : "210d4e12d08e1b2a",
-        "parentUid" : "8dbae755a1e86fe82923fc55e56eb8e3",
-        "status" : "passed",
+        "uid" : "f51098409f998978",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "skipped",
         "time" : {
-          "start" : 1687926060214,
-          "stop" : 1687926060214,
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_2",
+        "uid" : "7b31b12da5ca28a2",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_1",
+        "uid" : "a71f2747772f9318",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_1[kwargs0]",
+        "uid" : "67513429e264b67a",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688197553482,
+          "stop" : 1688197553482,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值', 'sellerTaxpayerCode': '请求报文值', 'buyerTaxpayerName': '请求报文值', 'invoiceBusinessType': '请求报文值', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_2",
+        "uid" : "2d8d7b8fdee0a8cd",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688197553560,
+          "stop" : 1688197553560,
           "duration" : 0
         },
         "flaky" : false,
@@ -57,8 +108,8 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8dbae755a1e86fe82923fc55e56eb8e3"
+      "uid" : "4a957a5a681c51547035dc47cce1dc47"
     } ],
-    "uid" : "f8b0faf773517d923b353d1ef0c9672e"
+    "uid" : "4e048fba802ca2e2c1a051a5254d3533"
   } ]
 }

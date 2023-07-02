@@ -1,43 +1,45 @@
 {
-  "bc9880d8614df209dbcda5de753ff43c" : {
+  "58935e4ea3c1f3085d28292c29dc7f5c" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
+      "skipped" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "210d4e12d08e1b2a",
-      "status" : "passed",
+      "uid" : "a71f2747772f9318",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: unconditional skip",
       "time" : {
-        "start" : 1687926060214,
-        "stop" : 1687926060214,
+        "start" : 1688197553576,
+        "stop" : 1688197553576,
         "duration" : 0
       }
     } ]
   },
-  "09b9d018b4cec6ba76c3dc15398d6f10" : {
+  "1ce1f6319f9d0d1949b789368eb2c417" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7365a37285e5a965",
-      "status" : "passed",
+      "uid" : "67513429e264b67a",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'post'",
       "time" : {
-        "start" : 1687926060214,
-        "stop" : 1687926060214,
+        "start" : 1688197553482,
+        "stop" : 1688197553482,
         "duration" : 0
       }
     } ]
   },
-  "30363634153052517fa3bdf6c753fcf8" : {
+  "3abc10ed7386312b8a5d30e22bdaaf7e" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -47,11 +49,71 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "3ca8b81bf2698678",
+      "uid" : "d34bab91c19d31b6",
       "status" : "passed",
       "time" : {
-        "start" : 1687926060199,
-        "stop" : 1687926060199,
+        "start" : 1688197553576,
+        "stop" : 1688197553576,
+        "duration" : 0
+      }
+    } ]
+  },
+  "533baeb4469c0c052087829a8c7ec016" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2d8d7b8fdee0a8cd",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'post'",
+      "time" : {
+        "start" : 1688197553560,
+        "stop" : 1688197553560,
+        "duration" : 0
+      }
+    } ]
+  },
+  "7da0dce3978917d18b3d5dd866aed121" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f51098409f998978",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: unconditional skip",
+      "time" : {
+        "start" : 1688197553576,
+        "stop" : 1688197553576,
+        "duration" : 0
+      }
+    } ]
+  },
+  "9b0859fc2644582e42f0ea8cd6af5712" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7b31b12da5ca28a2",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: unconditional skip",
+      "time" : {
+        "start" : 1688197553576,
+        "stop" : 1688197553576,
         "duration" : 0
       }
     } ]
