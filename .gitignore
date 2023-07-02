@@ -11,6 +11,7 @@ out
 **/__pycache__/
 /.pytest_cache
 /.idea!/logs/
+./report/
 /report/
 /historyReport/
 /logs/
