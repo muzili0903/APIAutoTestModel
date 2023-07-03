@@ -11,7 +11,6 @@ from common.core.reqSend import requestSend
 from common.util.yamlOperation import read_folder_case
 
 
-@pytest.mark.skip
 class TestExample:
     # 获取接口内容：
     # 方式一：通过读excel方式获取

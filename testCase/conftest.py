@@ -4,7 +4,7 @@
 @time    :2023/6/25 14:13
 @file    :conftestpy
 """
-# 多进程运行时，该文件都会在每条进程独立运行
+# 多进程运行时,相当于启动多个迷你版的pytest_runner, 该文件都会在每条进程独立运行
 import os
 import platform
 import subprocess
@@ -27,6 +27,13 @@ def login_and_logout():
     # 登陆
     yield
     # 登出
+
+
+@pytest.fixture(scope='session', autouse=True)
+def user_account(worker_id):
+    """use a different account in each xdist worker"""
+    logger.info("worker_id: {}".format(worker_id))
+    return "account_%s" % worker_id
 
 
 def pytest_configure(config):

@@ -1,15 +1,26 @@
 {
-  "total" : 1,
+  "total" : 2,
   "items" : [ {
     "uid" : "d7f1784afb4c242addf349bec4e7fc57",
     "name" : "testCase.pro.apis",
     "statistic" : {
       "failed" : 0,
-      "broken" : 2,
-      "skipped" : 3,
-      "passed" : 3,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 5,
       "unknown" : 0,
       "total" : 8
+    }
+  }, {
+    "uid" : "89b029578d37b764df95cb51f149b547",
+    "name" : "testCase.pro.flows",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
     }
   } ]
 }
