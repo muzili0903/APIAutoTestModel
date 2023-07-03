@@ -116,16 +116,17 @@ def pytest_terminal_summary(terminalreporter):
     _ERROR = len([i for i in terminalreporter.stats.get('error', []) if i.when != 'teardown'])
     _FAILED = len([i for i in terminalreporter.stats.get('failed', []) if i.when != 'teardown'])
     _SKIPPED = len([i for i in terminalreporter.stats.get('skipped', []) if i.when != 'teardown'])
-    _TOTAL = terminalreporter._numcollected
+    _DESELECTED = len([i for i in terminalreporter.stats.get("deselected", [])])
+    _SELECTED = terminalreporter._numcollected - _DESELECTED
     _TIMES = time.time() - terminalreporter._sessionstarttime
-    logger.info(f"用例总数: {_TOTAL}")
+    logger.info(f"用例总数: {_SELECTED}")
     logger.info(f"异常用例数: {_ERROR}")
     logger.info(f"失败用例数: {_FAILED}")
     logger.warning(f"跳过用例数: {_SKIPPED}")
     logger.info("用例执行时长: %.2f" % _TIMES + " s")
 
     try:
-        _RATE = _PASSED / _TOTAL * 100
+        _RATE = _PASSED / _SELECTED * 100
         logger.info("用例成功率: %.2f" % _RATE + " %")
     except ZeroDivisionError:
         logger.info("用例成功率: 0.00 %")
