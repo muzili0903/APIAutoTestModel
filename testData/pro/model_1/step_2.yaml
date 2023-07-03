@@ -1,0 +1,16 @@
+interface: step_2
+title: 风险发票查询-搜索接口
+method: post
+headers:
+  Content-Type: application/json
+  timeout: 5
+url: /ecr-admin/invoice_api/mage/riskManager/step_2
+data:
+  pageNumber: $Resp{step_1.isSuccess}
+  pageSize: $Req{step_1.pageSize}
+expected:
+  isSuccess: true
+  errorCode: null
+  message: null
+  isPinCode: null
+proName: pro

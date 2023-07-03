@@ -4,13 +4,17 @@
 @time    :2023/6/25 14:13
 @file    :conftestpy
 """
+# 多进程运行时，该文件都会在每条进程独立运行
 import os
+import platform
+import subprocess
 import time
+import socket
 
 import pytest
 
 from common.core.mysqlConnection import MySqlConnect
-from common.util.filePath import REPORT, CONFDIRENV
+from common.util.filePath import REPORT, CONFDIRENV, ensure_path_sep
 from common.util.fileZip import make_zip
 from common.util.getConfig import MyConfig
 from common.util.globalVars import GolStatic
@@ -81,6 +85,7 @@ def pytest_collection_modifyitems(config, items):
 def pytest_sessionfinish(session):
     """
     整个测试过程结束时执行一次。可以在此处实现清理工作
+    注：启用多进程跑时，pytest_sessionfinish需要优化
     例如：发送邮件
     :param session:
     :return:
@@ -91,9 +96,33 @@ def pytest_sessionfinish(session):
     myConfig = GolStatic.get_pro_var('MYCONFIG')
     # 打包报告文件放在historyReport目录下
     file = make_zip(REPORT)
+    # 打开allure报告
+    email_contents = ''
+    if platform.system() == 'Linux':
+        allure_port = 8051
+        # 杀掉allure报告进程
+        cmd = '''kill -9 $(netstat -nlp | grep :%s | awk '{print $7}' | awk -F"/" '{ print $1 }')''' % (allure_port)
+        sub = subprocess.Popen(cmd, shell=True)
+        sub.wait()
+        p = subprocess.Popen(
+            'nohup allure serve -p {0} {1} &'.format(allure_port, ensure_path_sep(REPORT + '/xml')), shell=True)
+        p.wait()
+        allure_url = f"http://{socket.gethostbyname(socket.gethostname())}:{allure_port}/index.html"
+        result = GolStatic.get_pro_var('RESULT')
+        email_contents = '''
+                        <p>XXX自动化测试已完成，详见：</p>
+                        <p><a href={}>Allure测试报告</a></p>
+                        <p>{}</p>
+                        <p>{}</p>
+                        <p style="color:#FF4A4D">{}</p>
+                        <p>{}</p>
+                        <p>{}</p>
+                        <p style="color:#FF4A4D">{}</p>
+                        '''.format(allure_url, result.get('_TOTAL'), result.get('_ERROR'), result.get('_FAILED'),
+                                   result.get('_SKIPPED'), result.get('_TIME'), result.get('_RATE'))
     if myConfig.get_config_bool('MAIL', 'is_send_mail'):
         # 发送邮件
-        send_mail(file)
+        send_mail(file, email_contents)
 
 
 def pytest_unconfigure(config):
@@ -124,9 +153,17 @@ def pytest_terminal_summary(terminalreporter):
     logger.info(f"失败用例数: {_FAILED}")
     logger.warning(f"跳过用例数: {_SKIPPED}")
     logger.info("用例执行时长: %.2f" % _TIMES + " s")
-
+    _RATE = 0.00
     try:
         _RATE = _PASSED / _SELECTED * 100
         logger.info("用例成功率: %.2f" % _RATE + " %")
     except ZeroDivisionError:
         logger.info("用例成功率: 0.00 %")
+
+    result = {'_TOTAL': f"用例总数: {_SELECTED}",
+              '_ERROR': f"异常用例数: {_ERROR}",
+              '_FAILED': f"失败用例数: {_FAILED}",
+              '_SKIPPED': f"跳过用例数: {_SKIPPED}",
+              '_TIME': "用例执行时长: %.2f" % _TIMES + " s",
+              '_RATE': "用例成功率: %.2f" % _RATE + " %"}
+    GolStatic.set_pro_var('RESULT', result)

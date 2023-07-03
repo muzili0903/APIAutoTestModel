@@ -2,34 +2,17 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "LAPTOP-TT5JR8LD",
+    "name" : "CN01XIT00000ZON",
     "children" : [ {
-      "name" : "18360-MainThread",
+      "name" : "16896-MainThread",
       "children" : [ {
-        "name" : "test_3",
-        "uid" : "d34bab91c19d31b6",
-        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
-        "status" : "passed",
-        "time" : {
-          "start" : 1688197553576,
-          "stop" : 1688197553576,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_3",
-        "uid" : "f51098409f998978",
-        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "name" : "test_1",
+        "uid" : "f65affc775ccb516",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
         "status" : "skipped",
         "time" : {
-          "start" : 1688197553576,
-          "stop" : 1688197553576,
+          "start" : 1688365296938,
+          "stop" : 1688365296938,
           "duration" : 0
         },
         "flaky" : false,
@@ -41,30 +24,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_2",
-        "uid" : "7b31b12da5ca28a2",
-        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
-        "status" : "skipped",
+        "uid" : "b1e64441f8b1f91d",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
+        "status" : "broken",
         "time" : {
-          "start" : 1688197553576,
-          "stop" : 1688197553576,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_1",
-        "uid" : "a71f2747772f9318",
-        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1688197553576,
-          "stop" : 1688197553576,
-          "duration" : 0
+          "start" : 1688365296894,
+          "stop" : 1688365296901,
+          "duration" : 7
         },
         "flaky" : false,
         "newFailed" : false,
@@ -75,13 +41,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_1[kwargs0]",
-        "uid" : "67513429e264b67a",
-        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "uid" : "5566d6c2081ed1ed",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
         "status" : "broken",
         "time" : {
-          "start" : 1688197553482,
-          "stop" : 1688197553482,
-          "duration" : 0
+          "start" : 1688365296006,
+          "stop" : 1688365296012,
+          "duration" : 6
         },
         "flaky" : false,
         "newFailed" : false,
@@ -91,13 +57,47 @@
         "retriesStatusChange" : false,
         "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值', 'sellerTaxpayerCode': '请求报文值', 'buyerTaxpayerName': '请求报文值', 'invoiceBusinessType': '请求报文值', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
       }, {
-        "name" : "test_2",
-        "uid" : "2d8d7b8fdee0a8cd",
-        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
-        "status" : "broken",
+        "name" : "test_3[kwargs2]",
+        "uid" : "aadecf77ccf097e7",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
+        "status" : "passed",
         "time" : {
-          "start" : 1688197553560,
-          "stop" : 1688197553560,
+          "start" : 1688365296933,
+          "stop" : 1688365296933,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值333', 'sellerTaxpayerCode': '请求报文值333', 'buyerTaxpayerName': '请求报文值333', 'invoiceBusinessType': '请求报文值333', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_3[kwargs0]",
+        "uid" : "d0dfb144dda42724",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1688365296920,
+          "stop" : 1688365296921,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值111', 'sellerTaxpayerCode': '请求报文值111', 'buyerTaxpayerName': '请求报文值111', 'invoiceBusinessType': '请求报文值111', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_3",
+        "uid" : "1d7b643d55064ca4",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688365296945,
+          "stop" : 1688365296945,
           "duration" : 0
         },
         "flaky" : false,
@@ -107,9 +107,43 @@
         "retriesCount" : 0,
         "retriesStatusChange" : false,
         "parameters" : [ ]
+      }, {
+        "name" : "test_2",
+        "uid" : "f1c37ca814d7320c",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688365296941,
+          "stop" : 1688365296941,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_3[kwargs1]",
+        "uid" : "d2d4e196c1fae37a",
+        "parentUid" : "1f629524f0178fc7b02b66f563f87af1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1688365296927,
+          "stop" : 1688365296927,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值222', 'sellerTaxpayerCode': '请求报文值222', 'buyerTaxpayerName': '请求报文值222', 'invoiceBusinessType': '请求报文值222', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
       } ],
-      "uid" : "4a957a5a681c51547035dc47cce1dc47"
+      "uid" : "1f629524f0178fc7b02b66f563f87af1"
     } ],
-    "uid" : "4e048fba802ca2e2c1a051a5254d3533"
+    "uid" : "f8b0faf773517d923b353d1ef0c9672e"
   } ]
 }

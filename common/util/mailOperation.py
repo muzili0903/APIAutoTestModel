@@ -14,10 +14,11 @@ from common.util.globalVars import GolStatic
 from common.util.logOperation import logger
 
 
-def send_mail(file: str) -> None:
+def send_mail(file: str, contents: str) -> None:
     """
     发送邮件
     :param file:
+    :param contents:
     :return:
     """
     logger.info("本次发送邮件附件地址: {}".format(file))
@@ -45,7 +46,7 @@ def send_mail(file: str) -> None:
     msg["To"] = ','.join(receivers)
 
     # ---文字部分---
-    part = MIMEText(content)
+    part = MIMEText(content + contents)
     msg.attach(part)
 
     # ---附件部分---

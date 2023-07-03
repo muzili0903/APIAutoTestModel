@@ -7,13 +7,13 @@
       "name" : "AttributeError: 'NoneType' object has no attribute 'post'",
       "children" : [ {
         "name" : "test_1[kwargs0]",
-        "uid" : "67513429e264b67a",
+        "uid" : "5566d6c2081ed1ed",
         "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
         "status" : "broken",
         "time" : {
-          "start" : 1688197553482,
-          "stop" : 1688197553482,
-          "duration" : 0
+          "start" : 1688365296006,
+          "stop" : 1688365296012,
+          "duration" : 6
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,13 +24,13 @@
         "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值', 'sellerTaxpayerCode': '请求报文值', 'buyerTaxpayerName': '请求报文值', 'invoiceBusinessType': '请求报文值', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
       }, {
         "name" : "test_2",
-        "uid" : "2d8d7b8fdee0a8cd",
+        "uid" : "b1e64441f8b1f91d",
         "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
         "status" : "broken",
         "time" : {
-          "start" : 1688197553560,
-          "stop" : 1688197553560,
-          "duration" : 0
+          "start" : 1688365296894,
+          "stop" : 1688365296901,
+          "duration" : 7
         },
         "flaky" : false,
         "newFailed" : false,
