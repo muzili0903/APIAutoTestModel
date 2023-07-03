@@ -6,7 +6,10 @@
 """
 import allure
 
+from copy import deepcopy
+
 from common.core import reqMethod
+from common.core.assertData import check_code
 from common.core.initializeParam import DisposeBody
 from common.util.globalVars import GolStatic
 from common.util.logOperation import logger
@@ -23,6 +26,7 @@ def requestSend(request, api_step: str = None, api_name: str = None, case: dict 
     :param request_body: 用例参数化
     :return:
     """
+    case = deepcopy(case)
     DisposeBody().ini_package(case=case, body_value=request_body)
     logger.info("请求地址：>>>{}".format(case.get('url')))
     logger.info("请求方法：>>>{}".format(case.get('method')))
@@ -34,8 +38,6 @@ def requestSend(request, api_step: str = None, api_name: str = None, case: dict 
         allure.attach(name="请求头", body=str(case.get('headers')))
         allure.attach(name="请求参数", body=str(case.get('data')))
     timeout = case.get('headers').pop('timeout')
-    # 存下接口的请求报文
-    GolStatic.set_file_var(filename=api_name, key='request_body', value=case.get('data'))
     if case.get('method').lower() == 'post':
         res = reqMethod.post(request, url=case.get('url'), data=case.get('data'),
                              content_type=case.get('headers').get('Content-Type'),
@@ -45,13 +47,14 @@ def requestSend(request, api_step: str = None, api_name: str = None, case: dict 
                             timeout=timeout)
     else:
         logger.error("请求方法不存在: >>>{}".format(case.get('method')))
-        raise "请求方法不存在"
-    # 存下接口的响应报文
-    if res is not None:
+        raise ValueError("方法不存在")
+    assert check_code(res.get('response_code'), 200)
+    if api_name is not None:
+        # 存下接口的请求报文
+        GolStatic.set_file_var(filename=api_name, key='request_body', value=case.get('data'))
+        # 存下接口的响应报文
         GolStatic.set_file_var(filename=api_name, key='response_body', value=res.get('response_body'))
-    else:
-        GolStatic.set_file_var(filename=api_name, key='response_body', value=res)
-    return res
+    return res.get('response_body')
 
 
 if __name__ == '__main__':

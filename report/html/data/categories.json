@@ -1,0 +1,47 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'NoneType' object has no attribute 'post'",
+      "children" : [ {
+        "name" : "test_1[kwargs0]",
+        "uid" : "67513429e264b67a",
+        "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688197553482,
+          "stop" : 1688197553482,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值', 'sellerTaxpayerCode': '请求报文值', 'buyerTaxpayerName': '请求报文值', 'invoiceBusinessType': '请求报文值', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_2",
+        "uid" : "2d8d7b8fdee0a8cd",
+        "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688197553560,
+          "stop" : 1688197553560,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c4adeb1f00ea95a262aeb6a87270854b"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

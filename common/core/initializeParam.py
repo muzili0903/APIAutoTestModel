@@ -69,7 +69,6 @@ class DisposeBody(object):
         if case_body is None or len(case_body) == 0:
             logger.info("无需初始化报文")
             return case_body
-        logger.info("body处理前: >>>{}".format(case_body))
         """
         # 用户自定义参数化
         if re.search('\$\{.*?\}', str(test_info)) is not None:
@@ -90,7 +89,6 @@ class DisposeBody(object):
         # 从响应报文获取参数值
         if re.search('\$Resp\{.*?\}', str(case_body)) is not None:
             case_body = eval(replaceData.replace_resp(str(case_body)))
-        logger.info("body处理后: >>>{}".format(case_body))
         return case_body
 
     def ini_package(self, case: dict, body_value: dict):
@@ -104,9 +102,11 @@ class DisposeBody(object):
         # 处理请求头
         self.ini_request_headers(case.get('headers'))
         # 处理请求体
+        logger.info("body处理前: >>>{}".format(case.get('data')))
         case_body = self.ini_params(case.get('data'))
         self.body(case_body, body_value)
         case.update({'data': case_body})
+        logger.info("body处理后: >>>{}".format(case_body))
         # 处理请求url
         base_url = self.MYCONFIG.get_config('PROJECT', case.get('proName') + '_base_url')
         url = base_url + case.get('url')

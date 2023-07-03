@@ -1,0 +1,19 @@
+[{
+  "pageNumber": 1,
+  "pageSize": 10,
+  "invoiceType": "请求报文值",
+  "sellerTaxpayerCode": "请求报文值",
+  "buyerTaxpayerName": "请求报文值",
+  "invoiceBusinessType": "请求报文值",
+  "invoiceDateStart": "",
+  "invoiceDateEnd": "",
+  "invoiceNo": "",
+  "exceptionBaseType": "",
+  "exceptionDetailType": "",
+  "businessNos": "",
+  "appId": "",
+  "specificBusinessTypes": "",
+  "exceptionDetailFlag": "",
+  "requestChannel": ""
+}
+]

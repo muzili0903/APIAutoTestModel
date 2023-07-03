@@ -1,0 +1,115 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-TT5JR8LD",
+    "children" : [ {
+      "name" : "18360-MainThread",
+      "children" : [ {
+        "name" : "test_3",
+        "uid" : "d34bab91c19d31b6",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "passed",
+        "time" : {
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_3",
+        "uid" : "f51098409f998978",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_2",
+        "uid" : "7b31b12da5ca28a2",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_1",
+        "uid" : "a71f2747772f9318",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688197553576,
+          "stop" : 1688197553576,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_1[kwargs0]",
+        "uid" : "67513429e264b67a",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688197553482,
+          "stop" : 1688197553482,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值', 'sellerTaxpayerCode': '请求报文值', 'buyerTaxpayerName': '请求报文值', 'invoiceBusinessType': '请求报文值', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_2",
+        "uid" : "2d8d7b8fdee0a8cd",
+        "parentUid" : "4a957a5a681c51547035dc47cce1dc47",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688197553560,
+          "stop" : 1688197553560,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4a957a5a681c51547035dc47cce1dc47"
+    } ],
+    "uid" : "4e048fba802ca2e2c1a051a5254d3533"
+  } ]
+}
