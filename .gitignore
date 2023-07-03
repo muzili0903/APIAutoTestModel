@@ -13,6 +13,7 @@ out
 /.idea!/logs/
 ./report/
 /report/
+/report/html
 /historyReport/
 /logs/
 /report/html/

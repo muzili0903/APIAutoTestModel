@@ -15,7 +15,7 @@ from common.util.yamlOperation import read_folder_case
 class TestExample:
     # 获取接口内容：
     # 方式一：通过读excel方式获取
-    test_case = read_folder_case(r"E:\project\APIAutoTestModel\testData\pro\model")
+    test_case = read_folder_case(r"E:\APIAutoTestModel\testData\pro\model")
 
     def test_1(self, login_and_logout):
         request = login_and_logout

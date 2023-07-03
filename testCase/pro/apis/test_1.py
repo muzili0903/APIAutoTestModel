@@ -16,12 +16,12 @@ from common.util.logOperation import logger
 class TestExample:
     # 获取接口内容：
     # 方式一：通过读excel方式获取
-    test_case = ReadExcel(filename=r'E:\project\APIAutoTestModel\testData\pro\APIAutoTestDataModel.xlsx').read_to_dict()
+    test_case = ReadExcel(filename=r'E:\APIAutoTestModel\testData\pro\APIAutoTestDataModel.xlsx').read_to_dict()
 
     # 参数化：
     # 方式一：通过json文件进行参数化，将json文件字段值替换掉请求报文字段值
     @pytest.mark.parametrize('kwargs',
-                             read_json(r'E:\project\APIAutoTestModel\testData\proParams\model\riskManageList.json'))
+                             read_json(r'E:\APIAutoTestModel\testData\proParams\model\riskManageList.json'))
     def test_1(self, login_and_logout, kwargs):
         logger.info(kwargs)
         request = login_and_logout
@@ -42,7 +42,12 @@ class TestExample:
         assert check_value(result.get('isSuccess'),
                            self.test_case.get('riskManageList').get('expected').get('isSuccess'))
 
-    def test_3(self, login_and_logout):
+    # 参数化：
+    # 方式三：通过json文件进行参数化，将json文件字段值替换掉请求报文字段值，json文件存在多组报文
+    @pytest.mark.parametrize('kwargs',
+                             read_json(r'E:\APIAutoTestModel\testData\proParams\model\riskManageList_mutil.json'))
+    def test_3(self, login_and_logout, kwargs):
+        logger.info(kwargs)
         assert 1 == 1
 
 
