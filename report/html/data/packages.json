@@ -1,5 +1,6 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
   "children" : [ {
     "name" : "testCase.pro",
     "children" : [ {
@@ -8,12 +9,12 @@
         "name" : "test_1",
         "children" : [ {
           "name" : "test_1[kwargs0]",
-          "uid" : "c0a1204a34f94f55",
+          "uid" : "f4273372dec23a9f",
           "parentUid" : "d92ecb28c7658aff2c8a3c63264e0195",
           "status" : "broken",
           "time" : {
-            "start" : 1688537352001,
-            "stop" : 1688537352001,
+            "start" : 1688546264565,
+            "stop" : 1688546264565,
             "duration" : 0
           },
           "flaky" : false,
@@ -24,14 +25,14 @@
           "retriesStatusChange" : false,
           "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值', 'sellerTaxpayerCode': '请求报文值', 'buyerTaxpayerName': '请求报文值', 'invoiceBusinessType': '请求报文值', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
         }, {
-          "name" : "test_2",
-          "uid" : "5a322dc114f0c697",
+          "name" : "测试用例标题: 适用于一个方法对应一个用例",
+          "uid" : "50b27eca48288eb5",
           "parentUid" : "d92ecb28c7658aff2c8a3c63264e0195",
           "status" : "broken",
           "time" : {
-            "start" : 1688537352438,
-            "stop" : 1688537352454,
-            "duration" : 16
+            "start" : 1688546265346,
+            "stop" : 1688546265346,
+            "duration" : 0
           },
           "flaky" : false,
           "newFailed" : false,
@@ -41,13 +42,13 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         }, {
-          "name" : "test_3[kwargs2]",
-          "uid" : "f8d0f1ae0628e45c",
+          "name" : "test_3[kwargs0]",
+          "uid" : "7ffdc0a4a2d589fa",
           "parentUid" : "d92ecb28c7658aff2c8a3c63264e0195",
-          "status" : "passed",
+          "status" : "broken",
           "time" : {
-            "start" : 1688537352470,
-            "stop" : 1688537352470,
+            "start" : 1688546265393,
+            "stop" : 1688546265393,
             "duration" : 0
           },
           "flaky" : false,
@@ -56,15 +57,15 @@
           "newBroken" : false,
           "retriesCount" : 0,
           "retriesStatusChange" : false,
-          "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值333', 'sellerTaxpayerCode': '请求报文值333', 'buyerTaxpayerName': '请求报文值333', 'invoiceBusinessType': '请求报文值333', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+          "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值111', 'sellerTaxpayerCode': '请求报文值111', 'buyerTaxpayerName': '请求报文值111', 'invoiceBusinessType': '请求报文值111', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
         }, {
           "name" : "test_3[kwargs1]",
-          "uid" : "3a6d3eda6e4cd550",
+          "uid" : "a43e03cb661921a",
           "parentUid" : "d92ecb28c7658aff2c8a3c63264e0195",
-          "status" : "passed",
+          "status" : "broken",
           "time" : {
-            "start" : 1688537352470,
-            "stop" : 1688537352470,
+            "start" : 1688546265440,
+            "stop" : 1688546265440,
             "duration" : 0
           },
           "flaky" : false,
@@ -75,13 +76,13 @@
           "retriesStatusChange" : false,
           "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值222', 'sellerTaxpayerCode': '请求报文值222', 'buyerTaxpayerName': '请求报文值222', 'invoiceBusinessType': '请求报文值222', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
         }, {
-          "name" : "test_3[kwargs0]",
-          "uid" : "937e05f66eae6a8a",
+          "name" : "test_3[kwargs2]",
+          "uid" : "996916de62f7730",
           "parentUid" : "d92ecb28c7658aff2c8a3c63264e0195",
-          "status" : "passed",
+          "status" : "broken",
           "time" : {
-            "start" : 1688537352470,
-            "stop" : 1688537352470,
+            "start" : 1688546265486,
+            "stop" : 1688546265486,
             "duration" : 0
           },
           "flaky" : false,
@@ -90,36 +91,19 @@
           "newBroken" : false,
           "retriesCount" : 0,
           "retriesStatusChange" : false,
-          "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值111', 'sellerTaxpayerCode': '请求报文值111', 'buyerTaxpayerName': '请求报文值111', 'invoiceBusinessType': '请求报文值111', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+          "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值333', 'sellerTaxpayerCode': '请求报文值333', 'buyerTaxpayerName': '请求报文值333', 'invoiceBusinessType': '请求报文值333', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
         } ],
         "uid" : "d92ecb28c7658aff2c8a3c63264e0195"
       }, {
         "name" : "test_2",
         "children" : [ {
           "name" : "test_1",
-          "uid" : "88a821b471544254",
+          "uid" : "9050fcd1e1dde20e",
           "parentUid" : "806ce5372d392df476b046e3f146cb7d",
           "status" : "broken",
           "time" : {
-            "start" : 1688537352470,
-            "stop" : 1688537352485,
-            "duration" : 15
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "newPassed" : false,
-          "newBroken" : false,
-          "retriesCount" : 0,
-          "retriesStatusChange" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "test_3",
-          "uid" : "cf522a2ea1caa92b",
-          "parentUid" : "806ce5372d392df476b046e3f146cb7d",
-          "status" : "passed",
-          "time" : {
-            "start" : 1688537352501,
-            "stop" : 1688537352501,
+            "start" : 1688546265549,
+            "stop" : 1688546265549,
             "duration" : 0
           },
           "flaky" : false,
@@ -131,12 +115,29 @@
           "parameters" : [ ]
         }, {
           "name" : "test_2",
-          "uid" : "5acbfe878df1ed9d",
+          "uid" : "43fbcdf764090fb8",
           "parentUid" : "806ce5372d392df476b046e3f146cb7d",
-          "status" : "passed",
+          "status" : "broken",
           "time" : {
-            "start" : 1688537352501,
-            "stop" : 1688537352501,
+            "start" : 1688546265596,
+            "stop" : 1688546265596,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_3",
+          "uid" : "b9a121bcb5543673",
+          "parentUid" : "806ce5372d392df476b046e3f146cb7d",
+          "status" : "broken",
+          "time" : {
+            "start" : 1688546265643,
+            "stop" : 1688546265643,
             "duration" : 0
           },
           "flaky" : false,
@@ -154,12 +155,12 @@
       "name" : "flows.test_flow_1",
       "children" : [ {
         "name" : "test_1",
-        "uid" : "a610c62aba948585",
+        "uid" : "65dcb84fdcfbb2da",
         "parentUid" : "638dc2ce57754cd5b200e9dfc7d3e77b",
         "status" : "broken",
         "time" : {
-          "start" : 1688537352501,
-          "stop" : 1688537352501,
+          "start" : 1688546265690,
+          "stop" : 1688546265690,
           "duration" : 0
         },
         "flaky" : false,
@@ -173,6 +174,5 @@
       "uid" : "flows.test_flow_1"
     } ],
     "uid" : "testCase.pro"
-  } ],
-  "name" : "packages"
+  } ]
 }

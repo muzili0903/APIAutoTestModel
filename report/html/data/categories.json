@@ -1,17 +1,18 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "AttributeError: 'NoneType' object has no attribute 'post'",
+      "name" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "children" : [ {
         "name" : "test_1[kwargs0]",
-        "uid" : "c0a1204a34f94f55",
-        "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
+        "uid" : "f4273372dec23a9f",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
         "status" : "broken",
         "time" : {
-          "start" : 1688537352001,
-          "stop" : 1688537352001,
+          "start" : 1688546264565,
+          "stop" : 1688546264565,
           "duration" : 0
         },
         "flaky" : false,
@@ -22,14 +23,116 @@
         "retriesStatusChange" : false,
         "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值', 'sellerTaxpayerCode': '请求报文值', 'buyerTaxpayerName': '请求报文值', 'invoiceBusinessType': '请求报文值', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
       }, {
+        "name" : "测试用例标题: 适用于一个方法对应一个用例",
+        "uid" : "50b27eca48288eb5",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688546265346,
+          "stop" : 1688546265346,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_3[kwargs0]",
+        "uid" : "7ffdc0a4a2d589fa",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688546265393,
+          "stop" : 1688546265393,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值111', 'sellerTaxpayerCode': '请求报文值111', 'buyerTaxpayerName': '请求报文值111', 'invoiceBusinessType': '请求报文值111', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_3[kwargs1]",
+        "uid" : "a43e03cb661921a",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688546265440,
+          "stop" : 1688546265440,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值222', 'sellerTaxpayerCode': '请求报文值222', 'buyerTaxpayerName': '请求报文值222', 'invoiceBusinessType': '请求报文值222', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_3[kwargs2]",
+        "uid" : "996916de62f7730",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688546265486,
+          "stop" : 1688546265486,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'pageNumber': 1, 'pageSize': 10, 'invoiceType': '请求报文值333', 'sellerTaxpayerCode': '请求报文值333', 'buyerTaxpayerName': '请求报文值333', 'invoiceBusinessType': '请求报文值333', 'invoiceDateStart': '', 'invoiceDateEnd': '', 'invoiceNo': '', 'exceptionBaseType': '', 'exceptionDetailType': '', 'businessNos': '', 'appId': '', 'specificBusinessTypes': '', 'exceptionDetailFlag': '', 'requestChannel': ''}" ]
+      }, {
+        "name" : "test_1",
+        "uid" : "9050fcd1e1dde20e",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688546265549,
+          "stop" : 1688546265549,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
         "name" : "test_2",
-        "uid" : "5a322dc114f0c697",
-        "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
+        "uid" : "43fbcdf764090fb8",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
         "status" : "broken",
         "time" : {
-          "start" : 1688537352438,
-          "stop" : 1688537352454,
-          "duration" : 16
+          "start" : 1688546265596,
+          "stop" : 1688546265596,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_3",
+        "uid" : "b9a121bcb5543673",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688546265643,
+          "stop" : 1688546265643,
+          "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
@@ -40,29 +143,12 @@
         "parameters" : [ ]
       }, {
         "name" : "test_1",
-        "uid" : "88a821b471544254",
-        "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
+        "uid" : "65dcb84fdcfbb2da",
+        "parentUid" : "1466a1fd74fd51b26015755ce2d2d49b",
         "status" : "broken",
         "time" : {
-          "start" : 1688537352470,
-          "stop" : 1688537352485,
-          "duration" : 15
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_1",
-        "uid" : "a610c62aba948585",
-        "parentUid" : "c4adeb1f00ea95a262aeb6a87270854b",
-        "status" : "broken",
-        "time" : {
-          "start" : 1688537352501,
-          "stop" : 1688537352501,
+          "start" : 1688546265690,
+          "stop" : 1688546265690,
           "duration" : 0
         },
         "flaky" : false,
@@ -73,9 +159,8 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "c4adeb1f00ea95a262aeb6a87270854b"
+      "uid" : "1466a1fd74fd51b26015755ce2d2d49b"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
-  } ],
-  "name" : "categories"
+  } ]
 }

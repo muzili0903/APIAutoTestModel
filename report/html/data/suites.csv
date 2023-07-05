@@ -1,10 +1,38 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_3[kwargs2]",""
-"passed","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","0","testCase.pro.apis","test_2","TestExample","","","test_3",""
-"passed","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","0","testCase.pro.apis","test_2","TestExample","","","test_2",""
-"broken","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_1[kwargs0]",""
-"broken","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","16","testCase.pro.apis","test_1","TestExample","","","test_2",""
-"broken","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","15","testCase.pro.apis","test_2","TestExample","","","test_1",""
-"passed","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_3[kwargs1]",""
-"passed","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_3[kwargs0]",""
-"broken","Wed Jul 05 14:09:12 CST 2023","Wed Jul 05 14:09:12 CST 2023","0","testCase.pro.flows","test_flow_1","TestFlowExample","","","test_1",""
+"broken","Wed Jul 05 16:37:44 CST 2023","Wed Jul 05 16:37:44 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_1[kwargs0]","
+        :param login_and_logout:
+        :param kwargs:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.apis","test_2","TestExample","","","test_1","
+        :param login_and_logout:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_3[kwargs1]","
+        :param login_and_logout:
+        :param kwargs:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.apis","test_2","TestExample","","","test_3","
+        :param login_and_logout:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_3[kwargs2]","
+        :param login_and_logout:
+        :param kwargs:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","测试用例标题: 适用于一个方法对应一个用例","
+        :param login_and_logout:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.apis","test_2","TestExample","","","test_2","
+        :param login_and_logout:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.apis","test_1","TestExample","","","test_3[kwargs0]","
+        :param login_and_logout:
+        :param kwargs:
+        :return:
+        "
+"broken","Wed Jul 05 16:37:45 CST 2023","Wed Jul 05 16:37:45 CST 2023","0","testCase.pro.flows","test_flow_1","TestFlowExample","","","test_1",""

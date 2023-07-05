@@ -4,6 +4,7 @@
 @time    :2023/6/26 16:37
 @file    :test_1.py
 """
+import allure
 import pytest
 
 from common.core.assertData import check_resp, check_value
@@ -13,6 +14,8 @@ from common.util.jsonOperation import read_json
 from common.util.logOperation import logger
 
 
+@allure.epic('pro项目名称')
+@allure.feature("单接口测试示例")
 class TestExample:
     # 获取接口内容：
     # 方式一：通过读excel方式获取
@@ -22,6 +25,7 @@ class TestExample:
     # 方式一：通过json文件进行参数化，将json文件字段值替换掉请求报文字段值
     @pytest.mark.parametrize('kwargs',
                              read_json(r'E:\APIAutoTestModel\testData\proParams\model\riskManageList.json'))
+    @allure.story("示例一")
     def test_1(self, login_and_logout, kwargs):
         """
         :param login_and_logout:
@@ -35,6 +39,8 @@ class TestExample:
         # 方式一：通过check_resp断言，默认部分匹配
         assert check_resp(result, self.test_case.get('riskManageList').get('expected'))
 
+    @allure.story("示例二")
+    @allure.title("测试用例标题: 适用于一个方法对应一个用例")
     def test_2(self, login_and_logout):
         """
         :param login_and_logout:
@@ -55,12 +61,14 @@ class TestExample:
     # 方式三：通过json文件进行参数化，将json文件字段值替换掉请求报文字段值，json文件存在多组报文
     @pytest.mark.parametrize('kwargs',
                              read_json(r'E:\APIAutoTestModel\testData\proParams\model\riskManageList_mutil.json'))
+    @allure.story("示例三")
     def test_3(self, login_and_logout, kwargs):
         """
         :param login_and_logout:
         :param kwargs:
         :return:
         """
+        allure.dynamic.title("测试用例标题: 用于参数化")
         logger.info(kwargs)
         assert 1 == 1
 

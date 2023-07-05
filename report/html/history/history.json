@@ -9,12 +9,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c0a1204a34f94f55",
+      "uid" : "f4273372dec23a9f",
       "status" : "broken",
-      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'post'",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352001,
-        "stop" : 1688537352001,
+        "start" : 1688546264565,
+        "stop" : 1688546264565,
         "duration" : 0
       }
     } ]
@@ -29,31 +29,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "88a821b471544254",
+      "uid" : "9050fcd1e1dde20e",
       "status" : "broken",
-      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'post'",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352470,
-        "stop" : 1688537352485,
-        "duration" : 15
+        "start" : 1688546265549,
+        "stop" : 1688546265549,
+        "duration" : 0
       }
     } ]
   },
   "83f01342a42604481099272382cdeced" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "f8d0f1ae0628e45c",
-      "status" : "passed",
+      "uid" : "996916de62f7730",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352470,
-        "stop" : 1688537352470,
+        "start" : 1688546265486,
+        "stop" : 1688546265486,
         "duration" : 0
       }
     } ]
@@ -61,18 +62,39 @@
   "dbfc7e2e7fd1def6e8ad405852a1a9c5" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "3a6d3eda6e4cd550",
-      "status" : "passed",
+      "uid" : "a43e03cb661921a",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352470,
-        "stop" : 1688537352470,
+        "start" : 1688546265440,
+        "stop" : 1688546265440,
+        "duration" : 0
+      }
+    } ]
+  },
+  "d38c76d90f68d947cf377d4403028ef7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7ffdc0a4a2d589fa",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
+      "time" : {
+        "start" : 1688546265393,
+        "stop" : 1688546265393,
         "duration" : 0
       }
     } ]
@@ -87,31 +109,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a610c62aba948585",
+      "uid" : "65dcb84fdcfbb2da",
       "status" : "broken",
-      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'post'",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352501,
-        "stop" : 1688537352501,
-        "duration" : 0
-      }
-    } ]
-  },
-  "d38c76d90f68d947cf377d4403028ef7" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "937e05f66eae6a8a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1688537352470,
-        "stop" : 1688537352470,
+        "start" : 1688546265690,
+        "stop" : 1688546265690,
         "duration" : 0
       }
     } ]
@@ -126,31 +129,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5a322dc114f0c697",
+      "uid" : "50b27eca48288eb5",
       "status" : "broken",
-      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'post'",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352438,
-        "stop" : 1688537352454,
-        "duration" : 16
+        "start" : 1688546265346,
+        "stop" : 1688546265346,
+        "duration" : 0
       }
     } ]
   },
   "7da0dce3978917d18b3d5dd866aed121" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "cf522a2ea1caa92b",
-      "status" : "passed",
+      "uid" : "b9a121bcb5543673",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352501,
-        "stop" : 1688537352501,
+        "start" : 1688546265643,
+        "stop" : 1688546265643,
         "duration" : 0
       }
     } ]
@@ -158,18 +162,19 @@
   "9b0859fc2644582e42f0ea8cd6af5712" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5acbfe878df1ed9d",
-      "status" : "passed",
+      "uid" : "43fbcdf764090fb8",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.MissingSchema: Invalid URL 'url': No scheme supplied. Perhaps you meant http://url?",
       "time" : {
-        "start" : 1688537352501,
-        "stop" : 1688537352501,
+        "start" : 1688546265596,
+        "stop" : 1688546265596,
         "duration" : 0
       }
     } ]

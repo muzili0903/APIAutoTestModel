@@ -4,6 +4,7 @@
 @time    :2023/7/3 14:53
 @file    :test_flow_1.py
 """
+import allure
 import pytest
 
 from common.core.assertData import check_resp
@@ -13,6 +14,7 @@ from common.util.logOperation import logger
 from common.util.yamlOperation import read_folder_case
 
 
+@allure.feature("业务流测试示例")
 class TestFlowExample:
     # 获取接口内容：
     # 方式一：通过读excel方式获取
@@ -30,6 +32,7 @@ class TestFlowExample:
         else:
             return True
 
+    @allure.story("示例一")
     def test_1(self, login_and_logout):
         request = login_and_logout
         # 执行第一个接口

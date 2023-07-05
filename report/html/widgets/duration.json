@@ -1,89 +1,89 @@
 [ {
-  "uid" : "f8d0f1ae0628e45c",
-  "name" : "test_3[kwargs2]",
-  "time" : {
-    "start" : 1688537352470,
-    "stop" : 1688537352470,
-    "duration" : 0
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "cf522a2ea1caa92b",
-  "name" : "test_3",
-  "time" : {
-    "start" : 1688537352501,
-    "stop" : 1688537352501,
-    "duration" : 0
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5acbfe878df1ed9d",
-  "name" : "test_2",
-  "time" : {
-    "start" : 1688537352501,
-    "stop" : 1688537352501,
-    "duration" : 0
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c0a1204a34f94f55",
+  "uid" : "f4273372dec23a9f",
   "name" : "test_1[kwargs0]",
   "time" : {
-    "start" : 1688537352001,
-    "stop" : 1688537352001,
+    "start" : 1688546264565,
+    "stop" : 1688546264565,
     "duration" : 0
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "5a322dc114f0c697",
-  "name" : "test_2",
-  "time" : {
-    "start" : 1688537352438,
-    "stop" : 1688537352454,
-    "duration" : 16
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "88a821b471544254",
+  "uid" : "9050fcd1e1dde20e",
   "name" : "test_1",
   "time" : {
-    "start" : 1688537352470,
-    "stop" : 1688537352485,
-    "duration" : 15
+    "start" : 1688546265549,
+    "stop" : 1688546265549,
+    "duration" : 0
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "3a6d3eda6e4cd550",
+  "uid" : "a43e03cb661921a",
   "name" : "test_3[kwargs1]",
   "time" : {
-    "start" : 1688537352470,
-    "stop" : 1688537352470,
+    "start" : 1688546265440,
+    "stop" : 1688546265440,
     "duration" : 0
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "937e05f66eae6a8a",
+  "uid" : "b9a121bcb5543673",
+  "name" : "test_3",
+  "time" : {
+    "start" : 1688546265643,
+    "stop" : 1688546265643,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "996916de62f7730",
+  "name" : "test_3[kwargs2]",
+  "time" : {
+    "start" : 1688546265486,
+    "stop" : 1688546265486,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "50b27eca48288eb5",
+  "name" : "测试用例标题: 适用于一个方法对应一个用例",
+  "time" : {
+    "start" : 1688546265346,
+    "stop" : 1688546265346,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "43fbcdf764090fb8",
+  "name" : "test_2",
+  "time" : {
+    "start" : 1688546265596,
+    "stop" : 1688546265596,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7ffdc0a4a2d589fa",
   "name" : "test_3[kwargs0]",
   "time" : {
-    "start" : 1688537352470,
-    "stop" : 1688537352470,
+    "start" : 1688546265393,
+    "stop" : 1688546265393,
     "duration" : 0
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "a610c62aba948585",
+  "uid" : "65dcb84fdcfbb2da",
   "name" : "test_1",
   "time" : {
-    "start" : 1688537352501,
-    "stop" : 1688537352501,
+    "start" : 1688546265690,
+    "stop" : 1688546265690,
     "duration" : 0
   },
   "status" : "broken",
