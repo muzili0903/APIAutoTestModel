@@ -1,0 +1,134 @@
+APIAutoTestModel简介:
+    该框架由pytest+pytest+requests+mysql+allure等搭建而成, 主要用于接口自动化测试, 框架运行流程如下:
+    1. 通过主文件main.py入口, 读取运行相关参数
+    2. 在conftest.py文件进行框架运行的初始化和运行结束的数据统计等
+    3. 读取用例, 对用例进行参数化后发送请求
+    4. 对响应结果进行断言
+    5. 生成测试报告, 打包报告文件, 发送邮件(可下载附件解压报告, 双击open_report.sh文件可打开报告)
+    6. 如果在Linux系统运行, 自动打开allure报告, 邮件内容有allure报告地址, 打开访问即可
+
+## 框架模块说明
+1. common：公共方法
+2. config: 配置文件
+3. historyReport: 历史报告压缩包
+4. logs：日志存放路径
+5. report：当前执行报告
+6. testCase：测试用例
+7. testData：测试数据
+8. APIAutoTestModel.xmind 框架思维导图
+9. main.py 框架运行主入口
+
+## 部分文件说明
+### config.ini文件
+[ENVIRONMENT] -> 运行框架指定项目的测试环境, 读取SIT.ini配置文件
+ENV = SIT.ini
+
+[RETRY] -> 请求重试次数和睡眠时间
+number = 10
+sleeptime = 5
+
+[PYTEST] -> pytest配置
+reruns = 0 -> 失败重跑运行次数
+delay = 1 -> 等待运行秒数
+maxfail = 0 -> 出现多少个失败就终止测试
+is_gip = False -> 不启用多进程运行
+gip = auto
+
+### SIT.ini文件
+[MAIL] -> 邮箱相关配置
+is_send_mail = False -> 不发送邮件
+mail_host = None
+sender = None
+sender_pass = None
+receivers = [] -> 收件人, 可多个收件人, 以字符串的形式存入列表中
+subject = invoice auto test report
+content = None
+
+[MYSQL] -> mysql数据库相关参数
+is_MySql = False -> 不连接数据库
+host = localhost
+port = 3306
+user = root
+password = 123456
+database = test
+charset = utf8
+
+[PROJECT] -> 项目基础url
+pro_base_url = https://test.com -> 由 项目名 pro + _base_url 组成
+
+[HEADERS] -> 部分请求头默认值
+Content-Type = application/json
+User-Agent = Mozilla/5.0
+Connection = keep-alive
+timeout = 10
+
+## 参数化与断言
+### 关于参数化
+1、使用 @pytest.mark.parametrize 通过读取 proParam 目录下的json文件进行参数化(例: test_1.py::TestExample::test_1)
+2、自定义参数化(例: test_1.py::TestExample::test_2)
+3、通过请求报文参数化: $Req{接口名.变量名} 变量名为: jsonpath表达式
+    示例:(例: test_flow_1.py::TestFlowExample::test_1)
+    test接口的请求报文: {"biz": 20220531, data: [{"name": "muzili"}, {"name": "rosy"}]}
+    函数带参数报文: {"biz": $Req{test.biz}}  定义接口请求报文中的某个字段值  参数化结果: {"biz": 20220531}
+    函数带参数报文: {"name": $Req{test.data[0].name}}    参数化结果: {"name": "muzili"}
+    函数带参数报文: {"name": $Req{test.data[1].name}}    参数化结果: {"name": "rosy"}
+    函数带参数报文: {"name": $Req{test.data[2].name}}  获取不到值  参数化结果: {"name": ""}
+4、通过响应报文参数化: $Resp{接口名.变量名} 变量名为: jsonpath表达式
+    示例:(例: test_flow_1.py::TestFlowExample::test_1)
+    test接口的响应报文: {"biz": 20220531, data: [{"name": "muzili"}, {"name": "rosy"}]}
+    函数带参数报文: {"biz": $Resp{test.biz}}  定义接口响应报文中的某个字段值  参数化结果: {"biz": 20220531}
+    函数带参数报文: {"name": $Resp{test.data[0].name}}    参数化结果: {"name": "muzili"}
+    函数带参数报文: {"name": $Resp{test.data[1].name}}    参数化结果: {"name": "rosy"}
+    函数带参数报文: {"name": $Resp{test.data[2].name}}  获取不到值  参数化结果: {"name": ""}
+
+### 关于断言
+校验类型
+    1、响应报文与预期结果(json文件校验) check_json
+    2、响应报文与预期结果(部分字段校验) check_part
+校验方式 check_type
+    1、全匹配(字段与字段值全匹配) perfect_match or ==
+    2、部分匹配(字段与字段值部分匹配) partial_match or in
+
+
+## 部分模块层级结构说明
+### testCase
+* testCase
+  * pro
+    * apis（单接口testCase）
+      * model01
+        * test_xxx_01.py
+        * test_xxx_02.py
+        * test_xxx_03.py
+        * ...
+      * model02
+      * model03
+      * ...
+    * flows（业务流程testCase）
+      * flowsType01(下级py文件命名规范：test_三级业务类型_交易类型.py)
+        * test_flow_type01.py
+        * test_flow_type02.py
+        * ...
+      * flowsType02
+      * flowsType03
+      * ...
+
+### testData
+* testData
+  * pro(pro项目所有接口)
+    * model01(model01下的接口testData)
+      * interface01.yaml
+      * interface02.yaml
+      * interface03.yaml
+      * ...
+    * model02
+    * model03
+    * ...
+    * pro.xlsx(pro项目所有接口, sheet表名与model名一致)
+  * proParam(pro项目所有接口的参数化报文)
+    * model01(model01下接口的参数化报文)
+      * interface01.json
+      * interface02.json
+      * interface03.json
+    * model02
+    * model03
+    * ...

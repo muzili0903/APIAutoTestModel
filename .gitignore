@@ -3,17 +3,13 @@
 ./.pytest_cache
 *.iml
 out
-./historyReport
 **/*.pyc
 .idea
-/.idea/
 /history/
 **/__pycache__/
 /.pytest_cache
 /.idea!/logs/
-./report/
 /report/
-/report/html
 /historyReport/
 /logs/
 /report/html/

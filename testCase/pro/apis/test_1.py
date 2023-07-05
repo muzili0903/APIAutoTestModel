@@ -23,6 +23,11 @@ class TestExample:
     @pytest.mark.parametrize('kwargs',
                              read_json(r'E:\APIAutoTestModel\testData\proParams\model\riskManageList.json'))
     def test_1(self, login_and_logout, kwargs):
+        """
+        :param login_and_logout:
+        :param kwargs:
+        :return:
+        """
         logger.info(kwargs)
         request = login_and_logout
         result = requestSend(request, case=self.test_case.get('riskManageList'), request_body=kwargs)
@@ -31,6 +36,10 @@ class TestExample:
         assert check_resp(result, self.test_case.get('riskManageList').get('expected'))
 
     def test_2(self, login_and_logout):
+        """
+        :param login_and_logout:
+        :return:
+        """
         request = login_and_logout
         # 参数化：
         # 方式二：自定义字段参数化
@@ -47,6 +56,11 @@ class TestExample:
     @pytest.mark.parametrize('kwargs',
                              read_json(r'E:\APIAutoTestModel\testData\proParams\model\riskManageList_mutil.json'))
     def test_3(self, login_and_logout, kwargs):
+        """
+        :param login_and_logout:
+        :param kwargs:
+        :return:
+        """
         logger.info(kwargs)
         assert 1 == 1
 

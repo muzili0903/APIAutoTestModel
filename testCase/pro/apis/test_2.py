@@ -17,15 +17,27 @@ class TestExample:
     test_case = read_folder_case(r"E:\APIAutoTestModel\testData\pro\model")
 
     def test_1(self, login_and_logout):
+        """
+        :param login_and_logout:
+        :return:
+        """
         request = login_and_logout
         request_body = {"pageNumber": 10}
         result = requestSend(request, case=self.test_case.get('riskManageList'), request_body=request_body)
         assert check_resp(result, self.test_case.get('riskManageList').get('expected'))
 
     def test_2(self, login_and_logout):
+        """
+        :param login_and_logout:
+        :return:
+        """
         assert 1 == 1
 
     def test_3(self, login_and_logout):
+        """
+        :param login_and_logout:
+        :return:
+        """
         assert 1 == 1
 
 

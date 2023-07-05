@@ -8,6 +8,7 @@ import pytest
 
 from common.core.assertData import check_resp
 from common.core.reqSend import requestSend
+from common.core.retryRequests import repeated_requests
 from common.util.logOperation import logger
 from common.util.yamlOperation import read_folder_case
 
@@ -16,6 +17,18 @@ class TestFlowExample:
     # 获取接口内容：
     # 方式一：通过读excel方式获取
     test_case = read_folder_case(r"E:\APIAutoTestModel\testData\pro\model_1")
+    count = 0
+
+    @repeated_requests
+    def retry(self) -> bool:
+        """
+        请求重试示例
+        :return: 返回False表示无需重推, 返回True表示需重推
+        """
+        if self.count == 3:
+            return False
+        else:
+            return True
 
     def test_1(self, login_and_logout):
         request = login_and_logout
@@ -34,6 +47,7 @@ class TestFlowExample:
         # 断言
         # 方式一：通过check_resp断言，默认部分匹配
         assert check_resp(result, self.test_case.get('riskManageList').get('expected'))
+        self.retry()
 
 
 if __name__ == '__main__':

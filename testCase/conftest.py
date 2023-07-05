@@ -12,6 +12,7 @@ import time
 import socket
 
 import pytest
+import requests
 
 from common.core.mysqlConnection import MySqlConnect
 from common.util.filePath import REPORT, CONFDIRENV, ensure_path_sep
@@ -25,8 +26,11 @@ from common.util.mailOperation import send_mail
 @pytest.fixture(scope="session")
 def login_and_logout():
     # 登陆
-    yield
+    session = requests.session()  # 登陆使用session
+    session.post(url='url')
+    yield session
     # 登出
+    session.get(url='url')
 
 
 @pytest.fixture(scope='session', autouse=True)
@@ -97,6 +101,15 @@ def pytest_sessionfinish(session):
     :param session:
     :return:
     """
+    pass
+
+
+def pytest_unconfigure(config):
+    """
+    在测试执行完毕后执行一在此处释放资源，例如删除临时文件等
+    :param config:
+    :return:
+    """
     # 生成allure报告
     cmd = 'allure generate --clean %s -o %s ' % (REPORT + '/xml', REPORT + '/html')
     os.system(cmd)
@@ -117,27 +130,19 @@ def pytest_sessionfinish(session):
         allure_url = f"http://{socket.gethostbyname(socket.gethostname())}:{allure_port}/index.html"
         result = GolStatic.get_pro_var('RESULT')
         email_contents = '''
-                        <p>XXX自动化测试已完成，详见：</p>
-                        <p><a href={}>Allure测试报告</a></p>
-                        <p>{}</p>
-                        <p>{}</p>
-                        <p style="color:#FF4A4D">{}</p>
-                        <p>{}</p>
-                        <p>{}</p>
-                        <p style="color:#FF4A4D">{}</p>
-                        '''.format(allure_url, result.get('_TOTAL'), result.get('_ERROR'), result.get('_FAILED'),
-                                   result.get('_SKIPPED'), result.get('_TIME'), result.get('_RATE'))
+                            <p>XXX自动化测试已完成，详见：</p>
+                            <p><a href={}>Allure测试报告</a></p>
+                            <p>{}</p>
+                            <p>{}</p>
+                            <p style="color:#FF4A4D">{}</p>
+                            <p>{}</p>
+                            <p>{}</p>
+                            <p style="color:#FF4A4D">{}</p>
+                            '''.format(allure_url, result.get('_TOTAL'), result.get('_ERROR'), result.get('_FAILED'),
+                                       result.get('_SKIPPED'), result.get('_TIME'), result.get('_RATE'))
     if myConfig.get_config_bool('MAIL', 'is_send_mail'):
         # 发送邮件
         send_mail(file, email_contents)
-
-
-def pytest_unconfigure(config):
-    """
-    在测试执行完毕后执行一在此处释放资源，例如删除临时文件等
-    :param config:
-    :return:
-    """
     pass
 
 
