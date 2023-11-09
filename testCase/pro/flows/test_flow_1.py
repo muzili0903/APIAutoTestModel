@@ -14,6 +14,7 @@ from common.util.logOperation import logger
 from common.util.yamlOperation import read_folder_case
 
 
+@allure.epic('pro项目名称')
 @allure.feature("业务流测试示例")
 class TestFlowExample:
     # 获取接口内容：

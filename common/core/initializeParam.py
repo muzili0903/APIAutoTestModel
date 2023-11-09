@@ -44,7 +44,7 @@ class DisposeBody(object):
             logger.error("request_headers处理失败: >>>{}".format(e))
         logger.info("request_headers处理后: >>>{}".format(request_headers))
 
-    def ini_db_params(self, sql: str):
+    def ini_db_params(self, sql: str) -> str:
         """
         初始化sql
         :param self:
@@ -91,7 +91,7 @@ class DisposeBody(object):
             case_body = eval(replaceData.replace_resp(str(case_body)))
         return case_body
 
-    def ini_package(self, case: dict, body_value: dict):
+    def ini_package(self, case: dict, body_value: dict) -> None:
         """
         组装报文
         :param self:

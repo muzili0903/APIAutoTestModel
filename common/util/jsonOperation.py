@@ -9,9 +9,10 @@ import json
 import os
 
 from common.util.logOperation import logger
+from typing import Any
 
 
-def read_json(file, is_str=False):
+def read_json(file, is_str=False) -> Any:
     """
     读取json文件内容
     :param file:

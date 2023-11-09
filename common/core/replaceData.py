@@ -8,12 +8,11 @@ import re
 
 from jsonpath import jsonpath
 
-# from common.core.initializeParam import ini_db_params
 from common.util.globalVars import GolStatic
 from common.util.logOperation import logger
 
 
-def query_db(sql_list: list):
+def query_db(sql_list: list) -> list:
     """
     查询数据库
     :param sql_list:
@@ -35,7 +34,7 @@ def query_db(sql_list: list):
     return query_result
 
 
-def replace_db(case, data: dict):
+def replace_db(case, data: dict) -> str:
     """
     从数据库中查询替换请求报文中的参数值 $DB{变量名}
     :param case: 用例报文
@@ -63,7 +62,7 @@ def replace_db(case, data: dict):
     return case
 
 
-def replace_user_var(case, data: dict):
+def replace_user_var(case, data: dict) -> str:
     """
     替换请求报文中的用户参数值 ${变量名}
     :param case: 用例报文
@@ -83,7 +82,7 @@ def replace_user_var(case, data: dict):
     return case
 
 
-def replace_func(case):
+def replace_func(case) -> str:
     """
     替换请求报文中的函数变量值 $(f函数名)
     :param case:
@@ -108,7 +107,7 @@ def replace_func(case):
     return case
 
 
-def replace_user_func(case):
+def replace_user_func(case) -> str:
     """
     替换请求报文中的函数变量值 $(u函数名)
     :param case:
