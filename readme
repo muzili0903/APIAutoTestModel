@@ -17,6 +17,7 @@ APIAutoTestModel简介:
 7. testData：测试数据
 8. APIAutoTestModel.xmind 框架思维导图
 9. main.py 框架运行主入口
+10. resCheck：接口校验文件
 
 ## 部分文件说明
 ### config.ini文件
