@@ -22,16 +22,16 @@ class TestFlowExample:
     test_case = read_folder_case(r"E:\APIAutoTestModel\testData\pro\model_1")
     count = 0
 
-    @repeated_requests
+    @repeated_requests()
     def retry(self) -> bool:
         """
         请求重试示例
-        :return: 返回False表示无需重推, 返回True表示需重推
+        :return: 返回False表示需重推, 返回True表示无需重推
         """
         if self.count == 3:
-            return False
-        else:
             return True
+        else:
+            return False
 
     @allure.story("示例一")
     def test_1(self, login_and_logout):

@@ -20,7 +20,7 @@ if __name__ == '__main__':
     GolStatic.set_pro_var('PROCONFIG', PROCONFIG)
     logger.info("main")
     if PROCONFIG.get_config_bool('PYTEST', 'is_gip'):
-        # 启动多进程跑用例时，pytest_sessionstart需要重新实例化MyConfig()  pytest_terminal_summary 收集结果需要优化
+        # 启动多进程跑用例时，pytest_sessionstart需要重新实例化MyConfig()
         args_list = ['-vs', TESTCASE,
                      '--reruns', PROCONFIG.get_config('PYTEST', 'reruns'),
                      '--reruns-delay', PROCONFIG.get_config('PYTEST', 'delay'),
