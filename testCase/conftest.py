@@ -149,7 +149,6 @@ def pytest_unconfigure(config):
 def pytest_terminal_summary(terminalreporter):
     """
     收集测试结果
-    注：启用多进程跑时，收集结果需要优化
     :param terminalreporter:
     :return:
     """
@@ -158,7 +157,8 @@ def pytest_terminal_summary(terminalreporter):
     _FAILED = len([i for i in terminalreporter.stats.get('failed', []) if i.when != 'teardown'])
     _SKIPPED = len([i for i in terminalreporter.stats.get('skipped', []) if i.when != 'teardown'])
     _DESELECTED = len([i for i in terminalreporter.stats.get("deselected", [])])
-    _SELECTED = terminalreporter._numcollected - _DESELECTED
+    # _SELECTED = terminalreporter._numcollected - _DESELECTED
+    _SELECTED = len(terminalreporter._progress_nodeids_reported) - _DESELECTED - _SKIPPED
     _TIMES = time.time() - terminalreporter._sessionstarttime
     logger.info(f"用例总数: {_SELECTED}")
     logger.info(f"异常用例数: {_ERROR}")
