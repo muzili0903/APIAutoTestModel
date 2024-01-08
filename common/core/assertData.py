@@ -23,8 +23,7 @@ def check_code(response_code: int, expect_code: int) -> bool:
     if response_code != expect_code:
         logger.info("请求状态码校验不通过: 预期code: >>> {} 实际code: >>> {}".format(response_code, expect_code))
         return False
-    else:
-        return True
+    return True
 
 
 def check_value(respone_value: Any, expect_value: Any) -> bool:
@@ -100,8 +99,7 @@ def check_list(response_body: list, expected_body: list, checked_type: str = 'pe
         return False
     if False not in result:
         return True
-    else:
-        return False
+    return False
 
 
 def check_resp(response_body: dict, expected_body: dict, checked_type: str = 'partial_match') -> bool:
@@ -144,8 +142,7 @@ def check_resp(response_body: dict, expected_body: dict, checked_type: str = 'pa
         return False
     if False not in result:
         return True
-    else:
-        return False
+    return False
 
 
 def check_one_to_many(response_body: list, expected_body: Any, is_date: bool = False) -> bool:

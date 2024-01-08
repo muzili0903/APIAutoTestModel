@@ -33,12 +33,39 @@ def login_and_logout():
     session.get(url='url')
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture()
 def user_account(worker_id):
     """use a different account in each xdist worker"""
+    # 在每个xdist worker中使用不同的帐户
     logger.info("worker_id: {}".format(worker_id))
     return "account_%s" % worker_id
 
+@pytest.fixture(scope="session")
+def session_data(tmp_path_factory, worker_id):
+    """
+    使用pytest-xdist分布式插件保证scope=session 的fixture在多进程运行情况下仍然能只运行一次
+    """
+    if worker_id == "master":
+        # not executing in with multiple workers, just produce the data and let
+        # pytest's fixture caching do its job
+        logger.info("单进程运行这里")
+        # 数据的来源：produce_expensive_data()
+        return produce_expensive_data()
+
+    # 分布式运行这里
+    # get the temp directory shared by all workers
+    root_tmp_dir = tmp_path_factory.getbasetemp().parent
+
+    fn = root_tmp_dir / "data.json"
+    with FileLock(str(fn) + ".lock"):
+        if fn.is_file():
+            # 第二次以上，从文件读取数据
+            data = json.loads(fn.read_text())
+        else:
+            # 第一次将数据写进文件
+            data = produce_expensive_data()
+            fn.write_text(json.dumps(data))
+    return data
 
 def pytest_configure(config):
     """
