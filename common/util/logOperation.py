@@ -25,7 +25,7 @@ class MyLogs(object):
 
         # 第一步，初始化日志对象并设置日志等级
         self.logger = logging.getLogger()
-        self.logger.setLevel(logging.DEBUG)
+        self.logger.setLevel(logging.INFO)
         self.logger.handlers = []
 
         # 第二步，创建一个handler，用于写入debug日志文件

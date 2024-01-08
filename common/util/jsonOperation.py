@@ -26,8 +26,7 @@ def read_json(file, is_str=False) -> Any:
         content = json.load(f)
     if is_str:
         return str(content)
-    else:
-        return content
+    return content
 
 
 if __name__ == '__main__':

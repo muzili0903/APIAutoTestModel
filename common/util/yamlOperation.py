@@ -27,8 +27,7 @@ def read_yaml(file: str, is_str: bool = True) -> Any:
         content = yaml.load(f, yaml.FullLoader)
     if is_str:
         return str(content)
-    else:
-        return content
+    return content
 
 
 def write_yaml(file: str, obj: object) -> None:
