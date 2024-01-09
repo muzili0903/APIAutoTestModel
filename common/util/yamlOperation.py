@@ -6,6 +6,7 @@
 """
 import os
 from typing import Any
+from filelock import FileLock
 
 import yaml
 
@@ -23,8 +24,9 @@ def read_yaml(file: str, is_str: bool = True) -> Any:
     if not os.path.exists(file):
         logger.error("文件不存在, 获取数据失败: >>>{}".format(file))
         return None
-    with open(file=file, encoding='utf-8') as f:
-        content = yaml.load(f, yaml.FullLoader)
+    with FileLock(str(path) + ".lock"):
+        with open(file=file, encoding='utf-8') as f:
+            content = yaml.load(f, yaml.FullLoader)
     if is_str:
         return str(content)
     return content
@@ -42,8 +44,9 @@ def write_yaml(file: str, obj: object) -> None:
     path = os.path.split(file)[0]
     if not os.path.exists(path):
         os.makedirs(path)
-    with open(file=file, mode="w", encoding='utf-8') as f:
-        yaml.dump(data=obj, stream=f, sort_keys=False, allow_unicode=True)
+    with FileLock(str(path) + ".lock"):
+        with open(file=file, mode="w", encoding='utf-8') as f:
+            yaml.dump(data=obj, stream=f, sort_keys=False, allow_unicode=True)
 
 
 def read_folder_case(path: str) -> dict:
